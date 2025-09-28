@@ -10,3 +10,12 @@ phone_number = int(input("Please enter your 10-digit phone number: "))
 #gathering last 4 digits first 
 line_number = phone_number % 1000
 phone_number //= 10000 
+
+prefix = phone_number % 1000
+phone_number //= 1000
+
+#first 3 digit separation
+area_code = phone_number
+
+#Output
+print(f"Phone Number: ({area_code}) {prefix}-{line_number:04d}")
