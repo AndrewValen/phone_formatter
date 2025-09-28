@@ -17,5 +17,8 @@ phone_number //= 1000
 #first 3 digit separation
 area_code = phone_number
 
-#Output
-print(f"Phone Number: ({area_code}) {prefix}-{line_number:04d}")
+#introduced an f string for variable manipulation
+#introduced 04d to safeguard phone numbers that are shorter than 10-digits
+#04d is a format spec. The 0 pads with zeros and the 4 returns a width of 4 characters
+#d tells Python to treat the value as an int 
+print(f"Formatted Phone Number: ({area_code}) {prefix}-{line_number:04d}")
